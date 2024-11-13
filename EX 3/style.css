@@ -1,0 +1,118 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #222222;
+}
+
+/* Hint: What can you do with a media query and flexbox? */
+@media (max-width: 1250px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-plan {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.pricing-plan {
+  background: snow;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.pricing-plan:hover {
+  transform: translateY(-10px);
+  border: 3px;
+  border-color: color-mix(in srgb, red 30%, blue 50%);
+  border-style: solid;
+}
+
+.plan-title-standard {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.plan-title-free {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.plan-title-premium {
+  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.plan-price {
+  font-size: 30px;
+  font-weight: 1000;
+
+  color: #2d2d2d;
+  margin: 20px 0;
+}
+
+.plan-price span {
+  font-size: 18px;
+  color: #888;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.plan-features li {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #888;
+}
+.plan-features :hover {
+  zoom: 110%;
+  cursor: pointer;
+}
+
+.plan-button {
+  background-color: #007bff;
+  flex-wrap: wrap;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.plan-button:hover {
+  background: linear-gradient(90deg, #2c2c2c, #3f5efb);
+}
